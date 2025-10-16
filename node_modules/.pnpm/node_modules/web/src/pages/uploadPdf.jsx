@@ -17,11 +17,13 @@ export default function DocXpressPDFTOWORDUploadPage() {
   const fileInputRef = useRef(null);
 
   // Python backend URL - change if different
-  const API_BASE_URL = 'http://localhost:5000'; 'http://docxpress.co'
+  /*const API_BASE_URL = 'http://localhost:5000'; 'http://docxpress.co'*/
   
- /*
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
-  */
+ 
+  /*const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';*/
+  
+// For Vite projects
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 
   const handleDragOver = (e) => {
     e.preventDefault();
