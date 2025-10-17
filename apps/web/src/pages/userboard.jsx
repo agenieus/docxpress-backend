@@ -23,7 +23,7 @@ export default function DocXpressDashboard() {
               <div className="flex items-center">
                 <span className="text-xl font-bold text-[#07479D]">DocXpress</span>
               </div>
-              
+              {/*
               <nav className="hidden md:flex space-x-6">
                 <a href="#" className="text-gray-700 hover:text-[#07479D] font-medium">PDF TOOL</a>
                 <a href="#" className="text-gray-700 hover:text-[#07479D] font-medium">JPG TO PDF</a>
@@ -31,27 +31,12 @@ export default function DocXpressDashboard() {
                 <a href="#" className="text-gray-700 hover:text-[#07479D] font-medium">PROJECTS APP</a>
                 <a href="#" className="text-gray-700 hover:text-[#07479D] font-medium">ALL PDF TOOLS</a>
               </nav>
+              */}
             </div>
 
             {/* Right side - Login/User */}
             <div className="flex items-center space-x-4">
-              {/* 
-              {!isLoggedIn ? (
-                
-                <>
-                  <button className="text-gray-700 hover:text-[#07479D]">Login</button>
-                  <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-medium">
-                    Sign Up
-                  </button>
-                </>
-              
-              ) : (
-                <div className="flex items-center space-x-2">
-                  <User className="h-6 w-6 text-gray-600" />
-                </div>
-              )}
-              */}
-              <Grid3x3 className="h-6 w-6 text-gray-600" />
+              <Grid3x3 className="h-6 w-6 text-black-600" />
             </div>
           </div>
         </div>
@@ -79,6 +64,7 @@ export default function DocXpressDashboard() {
           </div>
 
           {/* Filter Tabs */}
+          {/*
           <div className="mt-6 flex justify-center">
             <div className="flex bg-white rounded-lg shadow-sm border p-1">
               <button className="bg-[#07479D] text-white px-6 py-2 rounded font-medium">All</button>
@@ -90,6 +76,7 @@ export default function DocXpressDashboard() {
               <button className="text-gray-600 hover:text-[#07479D] px-6 py-2 font-medium">PDF Security</button>
             </div>
           </div>
+          */}
         </div>
       </section>
 
@@ -100,18 +87,22 @@ export default function DocXpressDashboard() {
             
             {/* Row 1 */}
             {/* Merge PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-6 h-6 bg-red-500 rounded"></div>
+            <Link to="/mergepdf">
+              <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+                <span className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">New</span>
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-6 h-6 bg-red-500 rounded"></div>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Merge PDF</h3>
+                <p className="text-sm text-gray-600">
+                  Combine PDFs in the order you want with the easiest PDF merger available.
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Merge PDF</h3>
-              <p className="text-sm text-gray-600">
-                Combine PDFs in the order you want with the easiest PDF merger available.
-              </p>
-            </div>
+            </Link>
 
             {/* Split PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-orange-500 rounded"></div>
               </div>
@@ -122,7 +113,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Compress PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-green-500 rounded"></div>
               </div>
@@ -134,20 +126,22 @@ export default function DocXpressDashboard() {
 
             {/* PDF to Word */}
             <Link to="/uploadpdf">
-            <div className="bg-white rounded-lg shadow-sm border hover:border-blue-500 shadow-md transition-shadow p-6">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <FileText className="w-6 h-6 text-blue-600" />
+              <div className="bg-white rounded-lg shadow-sm border hover:border-blue-500 shadow-md transition-shadow p-6 relative">
+                <span className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">New</span>
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">PDF to Word</h3>
+                <p className="text-sm text-gray-600">
+                  Easily convert your PDF files into easy to edit DOC and DOCX documents.
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">PDF to Word</h3>
-              <p className="text-sm text-gray-600">
-                Easily convert your PDF files into easy to edit DOC and DOCX documents.
-              </p>
-            </div>
             </Link>
 
             {/* Row 2 */}
             {/* PDF to PowerPoint */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <Presentation className="w-6 h-6 text-orange-600" />
               </div>
@@ -158,7 +152,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* PDF to Excel */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <FileSpreadsheet className="w-6 h-6 text-green-600" />
               </div>
@@ -169,7 +164,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Word to PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <FileText className="w-6 h-6 text-blue-600" />
               </div>
@@ -180,7 +176,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* PowerPoint to PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <Presentation className="w-6 h-6 text-orange-600" />
               </div>
@@ -192,7 +189,8 @@ export default function DocXpressDashboard() {
 
             {/* Row 3 */}
             {/* Excel to PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <FileSpreadsheet className="w-6 h-6 text-green-600" />
               </div>
@@ -204,7 +202,7 @@ export default function DocXpressDashboard() {
 
             {/* Edit PDF */}
             <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
-              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</span>
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-purple-500 rounded"></div>
               </div>
@@ -215,7 +213,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* PDF to JPG */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                 <Image className="w-6 h-6 text-yellow-600" />
               </div>
@@ -226,7 +225,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* JPG to PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                 <Image className="w-6 h-6 text-yellow-600" />
               </div>
@@ -238,7 +238,8 @@ export default function DocXpressDashboard() {
 
             {/* Row 4 */}
             {/* Sign PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-blue-500 rounded"></div>
               </div>
@@ -249,7 +250,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Watermark PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-purple-500 rounded"></div>
               </div>
@@ -260,7 +262,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Rotate PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-pink-500 rounded"></div>
               </div>
@@ -271,7 +274,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* HTML to PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-yellow-500 rounded"></div>
               </div>
@@ -283,7 +287,8 @@ export default function DocXpressDashboard() {
 
             {/* Row 5 */}
             {/* Unlock PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-blue-500 rounded"></div>
               </div>
@@ -294,7 +299,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Protect PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-blue-600" />
               </div>
@@ -305,7 +311,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Organize PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-orange-500 rounded"></div>
               </div>
@@ -316,7 +323,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* PDF to PDFA */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <FileText className="w-6 h-6 text-blue-600" />
               </div>
@@ -328,7 +336,8 @@ export default function DocXpressDashboard() {
 
             {/* Row 6 */}
             {/* Repair PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-green-500 rounded"></div>
               </div>
@@ -339,7 +348,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Page numbers */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-pink-500 rounded"></div>
               </div>
@@ -350,7 +360,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Extract PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-orange-500 rounded"></div>
               </div>
@@ -361,7 +372,8 @@ export default function DocXpressDashboard() {
             </div>
 
             {/* Validate PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-green-500 rounded"></div>
               </div>
@@ -373,7 +385,8 @@ export default function DocXpressDashboard() {
 
             {/* Row 7 */}
             {/* Compare PDF */}
-            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
+            <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-blue-500 rounded"></div>
               </div>
@@ -385,7 +398,7 @@ export default function DocXpressDashboard() {
 
             {/* Redact PDF */}
             <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
-              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</span>
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-blue-500 rounded"></div>
               </div>
@@ -397,7 +410,7 @@ export default function DocXpressDashboard() {
 
             {/* OCR PDF */}
             <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
-              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</span>
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-pink-500 rounded"></div>
               </div>
@@ -409,7 +422,7 @@ export default function DocXpressDashboard() {
 
             {/* Create a workflow */}
             <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6 relative">
-              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</span>
+              <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Coming soon</span>
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-6 h-6 bg-purple-500 rounded"></div>
               </div>
@@ -455,7 +468,7 @@ export default function DocXpressDashboard() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">On the go with Mobile</h3>
               <p className="text-gray-600 mb-6">
-                Use iLovePDF mobile app to quickly edit PDFs on your phone. Scan documents, sign contracts on the go.
+                Use DocXpress mobile app to quickly edit PDFs on your phone. Scan documents, sign contracts on the go.
               </p>
               <div className="bg-blue-50 rounded-lg p-4 mb-6">
                 <div className="h-32 bg-blue-100 rounded"></div>
@@ -530,12 +543,12 @@ export default function DocXpressDashboard() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Image editing made simple with iLoveIMG</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Image editing made simple with DocXpress</h2>
               <p className="text-gray-600 mb-6">
                 Discover the online image editor and all the tools you need to enhance and edit pictures online. Crop, resize, filters, effects, frames and a lot more.
               </p>
               <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold">
-                Go to iLoveIMG
+                Go to DocXpress
               </button>
             </div>
           </div>
@@ -547,7 +560,7 @@ export default function DocXpressDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">The PDF software trusted by millions of users</h2>
           <p className="text-gray-300 mb-12 max-w-3xl mx-auto">
-            iLovePDF is your number one web app for editing PDF with ease. Enjoy all the tools you need to work efficiently with your digital documents while keeping your data safe and secure.
+            DocXpress is your number one web app for editing PDF with ease. Enjoy all the tools you need to work efficiently with your digital documents while keeping your data safe and secure.
           </p>
           
           {/* Trust badges */}
@@ -608,7 +621,7 @@ export default function DocXpressDashboard() {
 
             {/* Company */}
             <div>
-              <h3 className="text-white font-semibold mb-4">COMPANY</h3>
+              <h3 className="text-white font-semibold mb-4">DocXpress</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:text-white">Our story</a></li>
                 <li><a href="#" className="hover:text-white">Media kit</a></li>
@@ -634,7 +647,7 @@ export default function DocXpressDashboard() {
           <div className="border-t border-gray-700 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-sm text-gray-400">
-                © 2024 iLovePDF.com - Your PDF Editor
+                © 2025 DocXpress.com - Your PDF Editor
               </div>
               <div className="flex space-x-4 mt-4 md:mt-0">
                 <a href="#" className="text-gray-400 hover:text-white">
@@ -665,4 +678,3 @@ export default function DocXpressDashboard() {
     </div>
   );
 }
-                 

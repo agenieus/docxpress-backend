@@ -1,5 +1,7 @@
 // components/Hero.jsx
 import React from "react";
+import heroImage from "../../assets/hero_images.png"; // Ensure this path is correct
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -14,9 +16,12 @@ export default function Hero() {
             All the tools you need to be more productive and work smarter with documents.
           </p>
           <div className="mt-8 flex gap-4">
+            <Link to="/userboard">
             <button className="bg-yellow-400 text-[#07479D] px-6 py-3 rounded-xl font-semibold shadow hover:bg-yellow-500 transition">
-              Start free
+              Get Started
             </button>
+            </Link>
+          
             <button className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#07479D] transition">
               Explore all tools
             </button>
@@ -26,7 +31,8 @@ export default function Hero() {
         {/* Right Illustration */}
         <div className="flex-1 flex justify-center">
           <img
-            src="../../assets/hero_images.png"
+          
+            src={heroImage}
             alt="PDF Illustration"
             className="w-full max-w-md"
           />

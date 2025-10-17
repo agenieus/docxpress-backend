@@ -1,5 +1,5 @@
 // App.jsx
-import React from "react";
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/landing/Navbar";
 import Hero from "./components/landing/Hero";
@@ -11,6 +11,7 @@ import Footer from "./components/landing/Footer";
 import Dashboard from "./pages/admin_dashboard";
 import DocXpressDashboard from "./pages/userboard";
 import DocXpressPDFTOWORDUploadPage from "./pages/uploadPdf";
+import MergePDFPage from './pages/mergepdf';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/userboard" element={<DocXpressDashboard />} />
           <Route path="/uploadpdf" element={<DocXpressPDFTOWORDUploadPage />} />
+          <Route path="/mergepdf" element={<MergePDFPage />} />
       </Routes>
 
         

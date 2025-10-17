@@ -34,7 +34,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 hover:text-[#07479D]"
+              className="text-black-700 hover:text-[#07479D]"
             >
               {link.name}
             </a>
@@ -70,10 +70,10 @@ export default function Navbar() {
         </div>
 
         {/* Desktop CTA */}
-        
-        <div className="flex items-center space-x-4">
+        {/* 
+        <div className="flex items-center space-x-4">*/}
           {/* */}
-          <Link to="/dashboard" className="sm:block text-gray-700 py-4 align-right hover:text-[#07479D]">Login</Link>
+          {/*<Link to="/dashboard" className="sm:block text-gray-700 py-4 align-right hover:text-[#07479D]">Login</Link>
 
           <Link to="/userboard">
             <button className="sm:block bg-[#07479D] text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700">
@@ -81,6 +81,7 @@ export default function Navbar() {
             </button>
           </Link>
         </div>
+        */}
         
         {/* Mobile Hamburger */}
         
@@ -107,6 +108,7 @@ export default function Navbar() {
             ))}
 
             {/* Kebab in Mobile Menu */}
+            {/*
             <div>
               <button
                 onClick={() => setIsKebabOpen(!isKebabOpen)}
@@ -129,6 +131,7 @@ export default function Navbar() {
                 </ul>
               )}
             </div>
+            */}
             
             
           </div>

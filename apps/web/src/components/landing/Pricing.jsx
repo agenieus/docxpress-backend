@@ -4,14 +4,14 @@ import React from "react";
 const plans = [
   {
     id: 1,
-    name: "Pro",
-    price: "9",
+    name: "Free",
+    price: "0",
     features: ["Unlimited access", "Single user", "All tools included"],
   },
   {
     id: 2,
-    name: "Team",
-    price: "7",
+    name: "API",
+    price: "10",
     features: ["Per user, billed annually", "Collaboration features", "Priority support"],
   },
 ];
